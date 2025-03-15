@@ -1,0 +1,86 @@
+/* تنسيق عام للصفحة */
+body {
+    font-family: "Marhey", sans-serif;
+    background-color: #030000;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* ضبط حجم اللوحة */
+
+#drawingBoard {
+    width: 80vw;  /* 80% من عرض الشاشة */
+    height: 60vh; /* 60% من ارتفاع الشاشة */
+    margin: 20px auto;
+    border: 3px solid #f75c03;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+/* تحسين أزرار التحكم */
+.controls {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.controls button, .controls input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.controls button {
+    background-color: #f75c03;
+    color: white;
+}
+
+.controls button:hover {
+    background-color: #d94c02;
+    transform: scale(1.1);
+}
+
+.controls input[type="color"] {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #f75c03;
+    cursor: pointer;
+}
+
+.controls input[type="range"] {
+    width: 120px;
+}
+
+/* تحسين الممحاة */
+#erase {
+    background-color: #fff;
+    color: #f75c03;
+    border: 2px solid #f75c03;
+}
+
+#erase:hover {
+    background-color: #f75c03;
+    color: white;
+}
+
+/* زر المسح الكامل */
+#clear {
+    background-color: red;
+}
+
+#clear:hover {
+    background-color: darkred;
+}

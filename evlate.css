@@ -1,0 +1,137 @@
+/* ✅ إعادة ضبط التنسيقات الافتراضية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: "Marhey", sans-serif;
+    background-color: #000000; /* أسود خالص */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* يجعل المحتوى دائمًا في منتصف الصفحة */
+    
+}
+
+/* ✅ ضبط القسم الرئيسي */
+.evaluation-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 140px); /* يجعل المحتوى يأخذ كامل الشاشة باستثناء الهيدر والفوتر */
+}
+
+/* ✅ ضبط الحاوية الرئيسية */
+.container_1 {
+    width: 80%;
+    max-width: 600px;
+    background-color: #1e1e1e; /* لون خلفية داكن للكارت */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.15);
+    text-align: center;
+}
+
+/* ✅ ضبط عنوان الصفحة */
+.title-one {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* ✅ ضبط مربع رفع الصورة */
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px dashed #f75c03;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    
+}
+
+.upload-box:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#image-preview {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+
+/* ✅ ضبط زر الرفع */
+.upload-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ✅ إخفاء الإدخال الحقيقي */
+#drawing {
+    display: none;
+}
+
+/* تحسين زر التقييم */
+.btn-orange {
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #f75c03;
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.btn-orange:hover {
+    background-color: #d94c02;
+    transform: scale(1.05);
+}
+
+/*  تحسين نتيجة التقييم */
+.evaluation-result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+}
+header {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+}
+
+
+/*  تحسين التصميم ليكون متجاوبًا مع الهواتف */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .upload-box {
+        width: 100%;
+    }
+
+    .btn-orange {
+        width: 100%;
+    }
+}

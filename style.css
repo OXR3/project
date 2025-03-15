@@ -1,0 +1,402 @@
+:root {
+    --main-color: #f75c03;
+    --transparent-color: rgba(247, 92, 3, 0.6);
+    --section-padding: 100px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Marhey", sans-serif;
+    background-color: #fff;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Landing Section */
+.landing {
+    min-height: 100vh;
+    background-image: url(../background.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.landing .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.landing .text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.landing .text h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.landing .text p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+
+
+/* Services Section */
+#services {
+    background-image: url("../pexels-polina-tankilevitch-4443133.jpg"); /* ضع مسار الصورة */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0; /* مسافة داخلية للحفاظ على شكل التصميم */
+    color: white; /* جعل النص واضحًا */
+    position: relative;
+    border-top: 10px solid white; /* خط أبيض فاصل */
+}
+#services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../pexels-polina-tankilevitch-4443133.jpg"); /* ضع نفس الخلفية */
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* تأثير الغلوشة */
+    z-index: 1;
+}
+
+#services .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+.single-service {
+    background: rgba(0, 0, 0, 0.6); /* خلفية داكنة شفافة */
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    color: white; /* جعل النص واضحًا */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* اجعل العنصر يبدو كزر عند تمرير الماوس عليه */
+.clickable-service {
+    cursor: pointer; /* يظهر يد للإشارة إلى أنه يمكن النقر */
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* عند تمرير الماوس يظهر تأثير */
+.clickable-service:hover {
+    transform: scale(1.05); /* تكبير بسيط لإعطاء إحساس بالحركة */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+}
+
+/* عند الضغط يظهر تأثير */
+.clickable-service:active {
+    transform: scale(0.98); /* تقليل الحجم قليلاً ليظهر وكأنه تم الضغط */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.single-service:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.single-service i {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: var(--main-color);
+}
+.single-service-link {
+    text-decoration: none; /* إزالة التسطير */
+    color: inherit; /* الحفاظ على لون النص */
+    display: block;
+    width: 100%;
+    display: inline-block;
+}
+.single-service-link:hover .single-service {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+/* Register Section */
+.register-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* جعله يحتل الشاشة بالكامل */
+    background: url("../background.jpg") center/cover no-repeat; /* ضبط الخلفية */
+    position: relative;
+}
+
+.register-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   /* background-color: rgba(0, 0, 0, 0.5);*/
+    background: rgba(0, 0, 0, 0.4); /* ظل خفيف فوق الخلفية */
+    backdrop-filter: blur(3px); /* تأثير الغلوشة */
+    -webkit-backdrop-filter: blur(3px); /* دعم لمتصفحات كروم وسفاري */
+
+}
+
+/* Transparent Glass Effect */
+.register-box {
+    background: rgba(255, 255, 255, 0.2); /* جعل البوكس شفاف */
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* تأثير الزجاج */
+    -webkit-backdrop-filter: blur(10px); /* دعم للمتصفحات القديمة */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* إضافة حدود شفافة */
+   /* animation: fadeInBox 1s ease-in-out;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* جعله في المنتصف تمامًا */
+}
+
+.register-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white; /* جعل العنوان باللون الأبيض ليظهر على الخلفية */
+}
+.register-form label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.register-form i {
+    margin-right: 8px;
+    color: #ff9b60; /* لون الأيقونات برتقالي */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-group-text {
+    background-color: #f75c03;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.form-control {
+    border-radius: 0 5px 5px 0;
+    border: 1px solid #ccc;
+}
+
+.btn-orange {
+    background-color: #f75c03;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-orange:hover {
+    background-color: #d94c02;
+    transform: scale(1.05);
+}
+
+/* Form Inputs */
+.register-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.register-form .form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: white; /* جعل النصوص واضحة */
+}
+
+.register-form .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.register-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Button Animation */
+/* تعديل زر Get Started */
+.btn-animate {
+    font-size: 14px; /* تصغير حجم النص */
+    padding: 6px 16px; /* تصغير حجم الزر */
+    background: #f75c03; /* لون الخلفية برتقالي */
+    color: white;
+    border: 2px solid #f75c03; /* حدود برتقالية */
+    border-radius: 15px; /* جعل الزر دائريًا */
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+/* تأثير التحويم */
+.btn-animate:hover {
+    background: #d94c02; /* لون أغمق عند التحويم */
+    border-color: #d94c02;
+    transform: scale(1.05); /* تكبير بسيط عند التحويم */
+}
+/* تصميم زر Sign Up بلون برتقالي */
+.btn-orange {
+    font-size: 16px;
+    padding: 10px 20px;
+    background: #f75c03 !important; /* لون خلفية برتقالي */
+    color: white !important; /* لون النص أبيض */
+    border: 2px solid #f75c03 !important; /* إضافة حد بنفس لون الزر */
+    border-radius: 20px; /* جعل الحواف دائرية */
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+/* تأثير التحويم عند تمرير الماوس */
+.btn-orange:hover {
+    background: #d94c02 !important; /* لون أغمق عند التحويم */
+    border-color: #d94c02 !important;
+    transform: scale(1.05); /* تكبير الزر قليلاً عند التحويم */
+}
+/* قسم الفيديوهات */
+.videos-section {
+    padding: 100px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.video-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-box:hover {
+    transform: scale(1.05);
+}
+
+.btn-orange {
+    background: #f75c03;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.btn-orange:hover {
+    background: #d94c02;
+}
+.navbar-nav .nav-item .nav-link {
+    color: white; /* اللون الافتراضي للأزرار */
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: white; /* لون النص عند المرور */
+    background-color: #f75c03; /* تغيير الخلفية إلى اللون البرتقالي */
+    border-radius: 5px; /* إضافة حواف دائرية */
+    padding: 8px 15px; /* زيادة التباعد */
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInBox {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    padding: 20px 0;
+    margin-top: auto;
+    margin-top: auto;
+    text-align: center;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
